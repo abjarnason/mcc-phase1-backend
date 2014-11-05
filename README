@@ -9,14 +9,12 @@ $ node server.js
 in the project directory and the server will run on port 3000. The easiest way to test the server is to use the Postman Chrome plugin. Otherwise the server can be tested with the following commands in terminal
 
 // basic REST functionality
-$ curl -X GET http://46.149.22.42:8080/api/contacts
-$ curl -X GET http://46.149.22.42:8080/api/contacts/contact_id
-$ curl -X POST -H 'Content-Type: application/json' -d '{"name": "Siggy", "email": "siggy@stone.fi", "phone": "6660666"}' http://46.149.22.42:8080/api/contacts
-$ curl -X PUT -H 'Content-Type: application/json' -d '{"name": "Siggy", "email": "siggy@aalto.fi", "phone": "6660666"}' http://46.149.22.42:8080/api/contacts/54424c6a8c7f56d736000001
-$ curl -X DELETE http://46.149.22.42:8080/api/contacts/contact_id
+$ curl -X GET http://localhost:8080/api/contacts
+$ curl -X GET http://localhost:8080/api/contacts/contact_id
+$ curl -X POST -H 'Content-Type: application/json' -d '{"name": "Siggy", "email": "siggy@stone.fi", "phone": "6660666"}' http://localhost:8080/api/contacts
+$ curl -X PUT -H 'Content-Type: application/json' -d '{"name": "Siggy", "email": "siggy@aalto.fi", "phone": "6660666"}' http://localhost:8080/api/contacts/54424c6a8c7f56d736000001
+$ curl -X DELETE http://localhost:8080/api/contacts/contact_id
 
 // the search and random (the feature of our choice) functionality
-$ curl -X GET http://46.149.22.42:8080/api/contacts/search_term
-$ curl -X GET http://46.149.22.42:8080/api/randomcontact
-
-5447ef07c07d75706c000003
+$ curl -X GET http://localhost:8080/api/contacts/search_term
+$ curl -X GET http://localhost:8080/api/randomcontact
