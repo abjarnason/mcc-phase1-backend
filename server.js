@@ -3,6 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
+var cors = require('cors');
 
 var app = express();
 
@@ -12,6 +13,8 @@ app.use(bodyParser.json());
 // allowes the use of HTTP verbs such as PUT and DELETE where the client
 // doesn't support it.
 app.use(methodOverride());
+// to allow all CORS requests
+app.use(cors());
 
 // set up the port
 var port = process.env.PORT || 8080;
